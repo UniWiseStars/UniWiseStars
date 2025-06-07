@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniWise Stars</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #212529; }
+    header, footer { background: #212529; color: white; text-align: center; padding: 1rem 0; }
+    nav { background: #b58b34; padding: 0.5rem; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+    h1, h2 { color: #212529; }
+    .button { background: #b58b34; color: white; padding: 0.8rem 1.5rem; border: none; text-decoration: none; display: inline-block; margin-top: 1rem; }
+    .upload-form { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    input, textarea { width: 100%; padding: 0.7rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; }
+    .review-card { background: #fff; border-left: 5px solid #b58b34; padding: 1rem; margin-bottom: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="uniwise-logo.png" alt="UniWise Stars Logo" style="width: 150px;">
+    <h1>UniWise Stars</h1>
+    <p>Turning Potential into Excellence</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#upload">Upload</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" class="container">
+    <h2>Welcome to UniWise Stars</h2>
+    <p>We help university students excel in their academic journey by offering support with assignments, exam memos, and portfolios. Trusted by many, our services aim for distinction-level results with timely and plagiarism-free submissions.</p>
+    <a href="#upload" class="button">Upload & Sell Your Work</a>
+  </section>
+
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Assignment Guidance</li>
+      <li>Exam Memos & Solutions</li>
+      <li>Portfolio Support</li>
+      <li>Essay & Research Assistance</li>
+    </ul>
+  </section>
+
+  <section id="upload" class="container">
+    <h2>Upload Your Assignment or Exam</h2>
+    <p>Upload your high-quality completed assignments or exam memos to sell on our platform. Students will be able to purchase and download these resources.</p>
+    <div class="upload-form">
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="price">Price (R):</label>
+        <input type="number" id="price" name="price" min="0" step="0.01" required>
+
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file" required>
+
+        <button type="submit" class="button">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="reviews" class="container">
+    <h2>What Students Say</h2>
+    <div class="review-card">
+      <p><strong>Thando M. (UNISA)</strong></p>
+      <p>"UniWise helped me pass my final year! I was stuck on my portfolio, but they broke it down so well. Highly recommend!"</p>
+    </div>
+    <div class="review-card">
+      <p><strong>Karabo R. (UJ)</strong></p>
+      <p>"Professional and fast. I got 86% on my last assignment thanks to their guidance. Thank you UniWise!"</p>
+    </div>
+    <div class="review-card">
+      <p><strong>Lebo S. (TUT)</strong></p>
+      <p>"I submitted my assignment late, but UniWise still helped me polish it and I managed to get a distinction."</p>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>📞 WhatsApp: +27 72 176 7899<br>
+       ✉️ Email: info@uniwisestars.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 UniWise Stars. All rights reserved.</p>
+  </footer>
+</body>
+</html>
